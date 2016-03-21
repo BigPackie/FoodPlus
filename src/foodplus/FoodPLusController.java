@@ -6,6 +6,7 @@
 package foodplus;
 
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,6 +19,7 @@ import javafx.scene.control.Label;
  */
 public class FoodPLusController implements Initializable {
     
+    /*
     @FXML
     private Label label;
     
@@ -26,10 +28,15 @@ public class FoodPLusController implements Initializable {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
     }
+    */
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+        
     }    
     
 }

@@ -38,7 +38,7 @@
                         <Insets />
                      </opaqueInsets>
                      <children>
-                        <Label layoutX="160.0" layoutY="14.0" text="EN" textFill="#639001">
+                        <Label layoutX="160.0" layoutY="14.0" text="%lang" textFill="#639001">
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>

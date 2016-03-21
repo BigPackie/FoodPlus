@@ -9,8 +9,8 @@ and open the template in the editor.
 */
 
 .theme {
-    master-color: lime;
-    -fx-background-color: derive(master-color, 90%);
+    master-color: papayawhip;
+    -fx-background-color: derive(master-color, 10%);
 }
 
 .theme-def {

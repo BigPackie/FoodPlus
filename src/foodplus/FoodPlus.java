@@ -5,7 +5,12 @@
  */
 package foodplus;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Application;
@@ -23,7 +28,24 @@ public class FoodPlus extends Application {
     @Override
     public void start(Stage stage)  {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("FoodPLus.fxml"));
+            
+            Properties settings = new Properties();
+            settings.load(new FileInputStream("src/etc/settings.properties"));
+            String language=settings.getProperty("lang.lang");
+            String country=settings.getProperty("lang.country");
+            
+            Locale locale;
+            if(language == null || country == null){
+                locale=Locale.ENGLISH;
+            }else{
+             locale = new Locale(language,country);
+            }
+           
+            ResourceBundle resources = ResourceBundle.getBundle("etc.language",locale);
+            
+            Parent root = FXMLLoader.load(getClass().getResource("FoodPLus.fxml"),resources);
+            
+            
             
             Scene scene = new Scene(root);
             
@@ -40,6 +62,7 @@ public class FoodPlus extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
     }
     
 }
